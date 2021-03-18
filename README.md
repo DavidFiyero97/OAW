@@ -1,5 +1,5 @@
 # OAW
-Repositorio de Optimización de aplicaciones web Víctor Hugo Menéndez Domínguez
+## Repositorio de Optimización de aplicaciones web Víctor Hugo Menéndez Domínguez
 
 Equipo: 
 
@@ -8,4 +8,4 @@ Equipo:
 
 * Jessica Sarai González Bautista
 * Karina Angélica Carmona Vargas
-  * David Armando Salazar Vazquez
+* David Armando Salazar Vazquez
