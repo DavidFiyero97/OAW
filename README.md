@@ -3,4 +3,4 @@ Repositorio de Optimización de aplicaciones web Víctor Hugo Menéndez Domíngu
 
 Equipo: 
 
-| <a href="https://github.com/JessicaSarai98"> Jessica González Bautista  </a>| <a href="https://github.com/karina-carmonaa"> Karina Carmona </a> |<a href="https://github.com/DavidFiyero97"> David Salazar Vazquez </a>  |
+| <a href="https://github.com/JessicaSarai98">![Jessica González Bautista](https://github.com/DavidFiyero97/OAW/tree/main/imagenes)</a>| <a href="https://github.com/karina-carmonaa"> Karina Carmona </a> |<a href="https://github.com/DavidFiyero97"> David Salazar Vazquez </a>  |
