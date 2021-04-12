@@ -8,24 +8,29 @@
  <!DOCTYPE html>
  <html>
  <head>
-  <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
-   <meta charset="utf-8">
-   <title>RSS</title>
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+    <meta charset="utf-8">
+    <title>RSS</title>
  </head>
  <body class="centrado fondo">
   <h1>Bienvenido</h1>
   <main>
-  <div class="buscador">
-    <h2> Introduzca la direccion del archivo xml a guardar:</h2>
-    <br>
-    <form action="save.php" method="post" class="forma">
-      <div class="searchForm" id="searchForm">
-        <input name="urlXml" type="search" class="searchBar">
-      </div>
+    <div class="buscador">
+      <h2> Introduzca la dirección del archivo xml a guardar:</h2>
       <br>
-      <input type="submit" value="Agregar" class="btn">
-    </form>
-  </div>
+      <form action="save.php" method="post" class="forma">
+        <div class="searchForm" id="searchForm">
+          <input name="urlXml" type="search" class="searchBar">
+        </div>
+        <br>
+        <input type="submit" value="Agregar" class="btn">
+      </form>
+    </div>
+	<br>
+	<br> 
+	
+	<a href="buscador.php" class="margenes"><button class="btn btn-success">Ir al buscador</button></a>
   </main>
  </body>
+
  </html>

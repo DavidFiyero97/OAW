@@ -1,3 +1,5 @@
+CREATE DATABASE bdrss;
+USE bdrss;
 -- phpMyAdmin SQL Dump
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
@@ -6,6 +8,8 @@
 -- Tiempo de generación: 10-01-2019 a las 06:39:14
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
+
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -18,15 +22,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de datos: `bd-rss`
---
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `entradas`
---
 
 CREATE TABLE `entradas` (
   `Titulo` longtext COLLATE utf8mb4_unicode_ci NOT NULL,

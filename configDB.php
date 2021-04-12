@@ -1,8 +1,8 @@
 <?php
-$usuario="root";
-$contrasena="your_password";
-$servidor="localhost";
-$base="bd-rss";
-$conexion= new mysqli($servidor,$usuario,"",$base);
+$usuario= "root";
+$contrasena= "";
+$servidor= "localhost";
+$base= "bdrss";
+$conexion= new mysqli($servidor,$usuario,$contrasena,$base);
 $conexion->set_charset("utf8");
  ?>

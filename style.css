@@ -35,7 +35,7 @@ main {
     background-color: #fff;
 }
 .searchBar {
-    width: 100%;
+    width: 90%;
     height: 30px;
     border-style: none;
     font-size: 18px;
@@ -47,6 +47,134 @@ main {
     font-size: 20px;
     color: #000;
     background-color: #77777A;
-    border-radius: 6px;
+    border-radius: 10px;
     border: 2px solid #454546;
+    margin-bottom: 10px;
 }
+
+.jumbotron{
+	display: block;
+    text-align: center;
+	background-color:#e8e8e8 !important;
+}
+.margenes{
+	margin-left:44%;
+}
+#margen{
+	width:70% !important;
+	margin:auto;
+	border-radius:5px;
+}
+.titulo{
+	padding: auto;
+	text-align:center;
+}
+.noticia{
+	padding-left:5%;
+	padding-right:5%;
+	text-align:justify !important;
+	font-weight: bold;
+}
+
+ul, ol {
+	list-style:none;
+}
+
+.header{
+	margin:5px;
+	padding: 5px;
+	border: 2px gray solid;
+	border-radius: 5px;
+}
+
+
+.marco-excel{
+	background-color:#f9f9f9;
+	padding:3%;
+	margin-left:2%;
+	margin-right:2%;
+	padding-bottom:1%;
+}
+
+.marginExcl{
+	margin-left:2%;
+}
+	
+.sideBar{
+	margin-left:1%;
+	display:inline-block;
+	width:25%;
+	height:50%;
+	background-color:#e8e8e8;
+	border-radius: 5px;
+}	
+
+#noticias{
+	margin-left:2%;
+	margin-right:2%;
+	display:inline-block;
+	width:70%;	
+	
+}	
+
+.active2{
+	margin-top:20px !important;
+	
+}	
+
+#fechas ul li {
+    background-color: gray;
+}
+
+#fechas ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+#fechas ul a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+#fechas ul li {
+    margin:0;
+    padding:0;
+}
+
+#fechas ul li:hover {
+    background:#5b78a7;
+}
+
+#fechas ul ul {
+    display:none;
+    position:relative;
+    top:100%;
+    left:0;
+    padding:0;
+}
+
+#fechas ul ul li {
+    float:none;
+	width:100%;
+	text-align:center;
+}
+
+#fechas ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+}
+
+#fechas ul li:hover > ul {
+    display:block;
+}
+	
+	
+	
+	

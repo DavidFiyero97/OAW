@@ -25,7 +25,7 @@ if($_POST){
 
     //si se encuentran resultados entonces nos muestra el numero de resultados
     if(mysqli_num_rows($resultado)>0){
-      $registros = '<p>Se han encontrado ' . mysqli_num_rows($resultado) . 'registros</p>';
+      $registros = '<p>Se han encontrado ' . mysqli_num_rows($resultado) . ' registros</p>';
       //mientras se recupere l fila, el apuntador fila se mueve hacia adelante y recupera la fila
       while($fila=mysqli_fetch_assoc($resultado)){
         $texto .=$fila['Titulo'] . "<br/>" . $fila['Autor'] . "<br/>" . $fila['Descripcion'] . "<br/>" . $fila['Fecha'] . "<br/><br/>";
@@ -33,7 +33,7 @@ if($_POST){
     }else{ //si no se encontro nigun url en la BD
       $texto = "No hay ningun resultado en la base de datos";
     } //cerrar conexion
-    mysqli_close();
+    mysqli_close($conexion); 
   }
   echo $registros . "<br/>" . $texto;
 }
