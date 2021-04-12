@@ -8,17 +8,24 @@
  <!DOCTYPE html>
  <html>
  <head>
+  <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
    <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width">
-   <title>Administrador</title>
+   <title>RSS</title>
  </head>
- <body>
-   <p>Bienvenido</p>
-   <form action="save.php" method="post">
-     <p> Introduzca la direccion del archivo xml a guardar:
-       <input type="text" name="urlXml">
-     </p>
-     <input type="submit" value="Agregar">
-   </form>
+ <body class="centrado fondo">
+  <h1>Bienvenido</h1>
+  <main>
+  <div class="buscador">
+    <h2> Introduzca la direccion del archivo xml a guardar:</h2>
+    <br>
+    <form action="save.php" method="post" class="forma">
+      <div class="searchForm" id="searchForm">
+        <input name="urlXml" type="search" class="searchBar">
+      </div>
+      <br>
+      <input type="submit" value="Agregar" class="btn">
+    </form>
+  </div>
+  </main>
  </body>
  </html>
