@@ -9,30 +9,15 @@ USE bdrss;
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
-
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
-
+CREATE TABLE `Urls` (
+`Link` longtext NOT NULL
+ );
 
 
 CREATE TABLE `entradas` (
-  `Titulo` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Autor` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Fecha` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Descripcion` longtext COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-COMMIT;
+  `Titulo` longtext  NOT NULL,
+  `Autor` longtext  NOT NULL,
+  `Fecha` longtext  NOT NULL,
+  `Descripcion` longtext NOT NULL
+);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

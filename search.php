@@ -6,11 +6,11 @@ if(!isset($_SESSION)){
 //registro contendra el número de reg encontrados
 $texto= '';
 $registros= '';
+
 if($_POST){
   //eliminar espacios en blanco u otros caracteres al inicio de la cadena
   //y asignar a busqueda
   $busqueda=trim($_POST['palabra']);
-  $int=0;
 
   //si la busqueda esta vacia entonces no hay nada que encontrar
   if(empty($busqueda)){
@@ -37,4 +37,5 @@ if($_POST){
   }
   echo $registros . "<br/>" . $texto;
 }
+
  ?>
