@@ -18,6 +18,7 @@ CREATE TABLE `entradas` (
   `Titulo` longtext  NOT NULL,
   `Autor` longtext  NOT NULL,
   `Fecha` longtext  NOT NULL,
-  `Descripcion` longtext NOT NULL
+  `Descripcion` longtext NOT NULL,
+  `Link` longtext NOT NULL
 );
 

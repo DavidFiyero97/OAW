@@ -86,7 +86,7 @@
                   <div class="carousel-caption relative">
                      <h1>Agregar nuevas noticias</h1>
                      <p>Siempre puede agregar un nuevo link del sitio de noticias de su agrado.</p>
-                     <a href="#agr">Agregar ahora</a>
+                     <a href="#nuevas">Agregar ahora</a>
                   </div>
                </div>
             </div>
@@ -186,7 +186,7 @@
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h3><a href="#agr">Agregar nuevo sitio de noticias</a></h3>
+                  <h3>Agregar nuevo sitio de noticias</h3>
                </div>
             </div>
          </div>
@@ -293,4 +293,3 @@ function autoCom(){
 	echo json_encode($array);
 }	
 ?> 
-
