@@ -20,8 +20,7 @@ for ($i = 0; $i < $itemQty; $i++) {
     $Autor = htmlspecialchars_decode($item->get_author()->get_name());
     $Fecha = htmlspecialchars_decode($item->get_date('Y-m-d H:i:s'));
     $Descripcion = htmlspecialchars_decode($item->get_description());
-    $Link = htmlspecialchars_decode($item->get_link());
-    $_GUARDAR_SQL = "INSERT INTO entradas (Titulo,Autor,Fecha,Descripcion,Link) VALUES ('$Titulo','$Autor','$Fecha','$Descripcion','$Link')";    
+    $_GUARDAR_SQL = "INSERT INTO entradas (Titulo,Autor,Fecha,Descripcion) VALUES ('$Titulo','$Autor','$Fecha','$Descripcion')";    
     mysqli_query($conexion, $_GUARDAR_SQL);
 }
 @mysqli_close($conexion);

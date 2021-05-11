@@ -29,8 +29,7 @@ CREATE TABLE `entradas` (
   `Titulo` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `Autor` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `Fecha` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Descripcion` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Link` longtext COLLATE utf8mb4_unicode_ci NOT NULL
+  `Descripcion` longtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;
 

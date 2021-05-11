@@ -8,5 +8,4 @@
     echo $columna['Autor']."<br/>".$columna['Titulo'] . "<br/>" . $columna['Descripcion'] . "<br/>".$columna['Fecha']."<br/><br/>";
     $ent++;
   }
-  //prueba
  ?>
