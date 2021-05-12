@@ -18,7 +18,7 @@ $itemQty = $feed->get_item_quantity();
 $aux = Buscar_url($url);
 
 if ($aux == 1){
-	echo "Url ya existente";
+	header("Location: index.php?err=0");
 }else{
 	$_GUARDAR_SQL = "INSERT INTO Urls (Link) VALUES ('$url')";
 	mysqli_query($conexion, $_GUARDAR_SQL);
