@@ -14,12 +14,11 @@
    <meta name="author" content="">
    <!-- bootstrap css -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
-   <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
@@ -149,7 +148,7 @@
                      <a href="#"><img src="images/orden.jpg" alt="" /></a>
                   </div>
                   <div class="author-content">
-                     <h1>Ordenar por</h1>
+                     <h1><i class="fas fa-sort"></i> Ordenar por</h1>
                   </div>
                   <nav class="main-nav" role="navigation">
                      <ul class="main-menu">
@@ -158,6 +157,55 @@
                         <li><a id="sortAutor">Autor</a></li>
                      </ul>
                   </nav>
+                  <div class="image">
+                     <a href="#"><img src="images/orden.jpg" alt="" /></a>
+                  </div>
+                  <div class="author-content">
+                     <h1><i class="fas fa-filter"></i> Filtrado por:</h1>
+                  </div>
+                  <div class="main-nav" role="navigation">
+                     <div class="dropdown">
+                        <button class="dropdown-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Año 2021
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-01">Enero</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-02">Febrero</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-03">Marzo</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-04">Abril</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-05">Mayo</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-06">Junio</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-07">Julio</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-08">Agosto</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-09">Septiembre</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-10">Octubre</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-11">Noviembre</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2021-12">Diciembre</button></a></li>
+                        </div>
+                     </div>
+                  </div>
+                  <br /> <br />
+                  <div class="main-nav" role="navigation">
+                     <div class="dropdown">
+                        <button class="dropdown-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Año 2020
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-01">Enero</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-02">Febrero</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-03">Marzo</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-04">Abril</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-05">Mayo</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-06">Junio</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-07">Julio</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-08">Agosto</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-09">Septiembre</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-10">Octubre</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-11">Noviembre</button></a></li>
+                           <li><a><button style="color:black;" class="mes dropdown-item" value="2020-12">Diciembre</button></a></li>
+                        </div>
+                     </div>
+                  </div>
                </div>
                <div class="copyright-text">
                   <p></p>
@@ -267,11 +315,10 @@
                url: 'meses.php', //archivo que recibe la peticion
                type: 'post', //método de envio
                success: function (data) { //una vez que el archivo recibe el request lo procesa y lo devuelve
-                  $("#noticias").html(data);
+                  $(".noticias").html(data);
                }
             });
          });
-
          $(document).ready(function () {
             var items = <?php autoCom(); ?>;
             $("#busqueda").autocomplete({
