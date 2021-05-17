@@ -65,6 +65,22 @@
          </div>
          <!-- end header inner -->
    </header>
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">URL EXISTENTE</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+         </div>
+         <div class="modal-body">
+         La URL ingresada ya existe, favor de ingresar otra o actuliazar las existentes.
+         </div>
+      </div>
+   </div>
+   </div>
    <!-- end header -->
    <section class="slider_section">
       <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
@@ -86,7 +102,7 @@
                   <div class="carousel-caption relative">
                      <h1>Agregar nuevas noticias</h1>
                      <p>Siempre puede agregar un nuevo link del sitio de noticias de su agrado.</p>
-                     <a href="#agr">Agregar ahora</a>
+                     <a href="#nuevas">Agregar ahora</a>
                   </div>
                </div>
             </div>
@@ -173,7 +189,6 @@
             <div class="col-md-12">
                <div class="img-box">
                   <figure><img src="images/about.png" alt="img" /></figure>
-                  <a href="#">read more</a>
                </div>
             </div>
          </div>
@@ -186,7 +201,7 @@
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h3><a href="#agr">Agregar nuevo sitio de noticias</a></h3>
+                  <h3>Agregar nuevo sitio de noticias</h3>
                </div>
             </div>
          </div>
@@ -231,6 +246,8 @@
    <script src="js/custom.js"></script>
    <script>
       window.onload = function () {
+         var sParametro = window.location.search.substring(1).split('=');
+         if(sParametro[1]=="0") {$('#exampleModal').modal('toggle')}
          $('.noticias').html('<?php imprimir('ORDER BY Fecha desc')?>');
          $('#sortTitulo').on('click', function () {
             $('.noticias').html('<?php imprimir("ORDER BY Titulo")?>');
@@ -279,7 +296,6 @@ function imprimir($parametros){
         $i++;
     }	
 }
-
 function autoCom(){
 	include("configDB.php");
 	$result = mysqli_query($conexion, "SELECT * FROM entradas");
@@ -293,4 +309,3 @@ function autoCom(){
 	echo json_encode($array);
 }	
 ?> 
-

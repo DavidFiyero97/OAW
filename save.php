@@ -18,7 +18,7 @@ $itemQty = $feed->get_item_quantity();
 $aux = Buscar_url($url);
 
 if ($aux == 1){
-	echo "Url ya existente";
+	header("Location: index.php?err=0");
 }else{
 	$_GUARDAR_SQL = "INSERT INTO Urls (Link) VALUES ('$url')";
 	mysqli_query($conexion, $_GUARDAR_SQL);
@@ -29,7 +29,8 @@ if ($aux == 1){
   	  $Autor = htmlspecialchars_decode($item->get_author()->get_name());
   	  $Fecha = htmlspecialchars_decode($item->get_date('Y-m-d H:i:s'));
   	  $Descripcion = htmlspecialchars_decode($item->get_description());
-  	  $_GUARDAR_SQL = "INSERT INTO entradas (Titulo,Autor,Fecha,Descripcion) VALUES ('$Titulo','$Autor','$Fecha','$Descripcion')";    
+	  $Link = htmlspecialchars_decode($item->get_link());
+	  $_GUARDAR_SQL = "INSERT INTO entradas (Titulo,Autor,Fecha,Descripcion,Link) VALUES ('$Titulo','$Autor','$Fecha','$Descripcion','$Link')";    
   	  mysqli_query($conexion, $_GUARDAR_SQL);
 	}
 	@mysqli_close($conexion);

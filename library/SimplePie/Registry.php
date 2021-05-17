@@ -217,8 +217,8 @@ class SimplePie_Registry
 					break;
 			}
 		}
-
-		$result = call_user_func_array(array($class, $method), $parameters);
+		
+		$result = call_user_func_array(array($class,$method),$parameters);
 		return $result;
 	}
 }
