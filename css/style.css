@@ -1003,3 +1003,8 @@ ul.contant_icon li img {
 	padding:10px;
 	width:70%;
 }
+
+.dropdown-btn{
+	padding-left:50px!important; 
+	padding-right:60px !important;
+}

@@ -26,9 +26,23 @@ if($_POST){
   $busqueda = trim($_POST['palabra']);
 
   $entero = 0;
+<<<<<<< HEAD
   
   if (empty($busqueda)){
 	  $texto = 'Búsqueda sin resultados';
+=======
+  $registros = '
+  <div id="noticias" class="service" style="padding-bottom: 0px;">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>Noticias </h2>';
+  if (empty($busqueda)){
+   $texto = '
+   <div class=" text-center jumbotron"><h4>NO HAY RESULTADOS EN LA BBDD</h4></div>
+   </div></div></div></div></br></br>';	
+>>>>>>> 324a90f541c4d1b1c10060fc5382d69b37564829
   }else{
 	  // Si hay información para buscar, abrimos la conexión
 	  //cadena de conexion 
@@ -41,6 +55,7 @@ if($_POST){
       //Si hay resultados...
 	  if (@mysqli_num_rows($resultado) > 0){ 
 	     // Se recoge el número de resultados
+<<<<<<< HEAD
 		 $registros = '
      <div id="noticias" class="service" style="padding-bottom: 0px;">
         <div class="container">
@@ -54,6 +69,11 @@ if($_POST){
            </div>
         </div>
         <div class="noticias" id="noticias">';
+=======
+		 $registros .= '<div class="noticias" id="noticias">
+               <span>HEMOS ENCONTRADO ' . mysqli_num_rows($resultado) . '</span>
+               </div></div></div></div>';
+>>>>>>> 324a90f541c4d1b1c10060fc5382d69b37564829
 	     // Se almacenan las cadenas de resultado
 		 while($fila = mysqli_fetch_assoc($resultado)){ 
         $texto .= '<div class="jumbotron"><h3><a target="_blank" href='.$fila['Link'].'>'.$fila['Titulo'] . '</a></h3><hr>' .
@@ -62,7 +82,13 @@ if($_POST){
 			}
 	  
 	  }else{
+<<<<<<< HEAD
 			   $texto = '<div class=" text-center jumbotron"><h4>NO HAY RESULTADOS EN LA BBDD</h4></div>';	
+=======
+			$texto = '
+         <div class=" text-center jumbotron"><h4>NO HAY RESULTADOS EN LA BBDD</h4></div>
+         </div></div></div></div></br></br>';	
+>>>>>>> 324a90f541c4d1b1c10060fc5382d69b37564829
 	  }
 	  // Cerramos la conexión (por seguridad, no dejar conexiones abiertas)
 	  mysqli_close($conexion);
