@@ -17,11 +17,7 @@ CREATE TABLE `Urls` (
 CREATE TABLE `entradas` (
   `Titulo` longtext  NOT NULL,
   `Autor` longtext  NOT NULL,
-<<<<<<< HEAD
-  `Fecha` longtext NOT NULL,
-=======
   `Fecha` longtext  NOT NULL,
->>>>>>> 324a90f541c4d1b1c10060fc5382d69b37564829
   `Descripcion` longtext NOT NULL,
   `Link` longtext NOT NULL
 );
