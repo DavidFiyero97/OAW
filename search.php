@@ -12,13 +12,9 @@ $registros = '';
 	  <meta name="viewport" content="width=device-width">
 	  <title>RSS</title>
       <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/responsive.css">
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="css/style-min.css">
+      <link rel="stylesheet" href="css/responsive-min.css">
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-         media="screen">
 		</head>
     <body class="main-layout">';
 if($_POST){
@@ -27,12 +23,7 @@ if($_POST){
 
   $entero = 0;
   $registros = '
-  <div id="noticias" class="service" style="padding-bottom: 0px;">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage">
-                  <h2>Noticias </h2>';
+  <div id="noticias" class="service" style="padding-bottom: 0px;"><div class="container"><div class="row"><div class="col-md-12"><div class="titlepage"><h2>Noticias </h2>';
   if (empty($busqueda)){
    $texto = '
    <div class=" text-center jumbotron"><h4>NO HAY RESULTADOS EN LA BBDD</h4></div>
@@ -61,21 +52,13 @@ if($_POST){
 	  
 	  }else{
 			$texto = '
-         <div class=" text-center jumbotron"><h4>NO HAY RESULTADOS EN LA BBDD</h4></div>
-         </div></div></div></div></br></br>';	
+         <div class=" text-center jumbotron"><h4>NO HAY RESULTADOS EN LA BBDD</h4></div></div></div></div></div></br></br>';	
 	  }
 	  // Cerramos la conexión (por seguridad, no dejar conexiones abiertas)
 	  mysqli_close($conexion);
   }
   echo $registros . "<br/>" . $texto;
   echo ' </div>
-  <footr>
-     <div class="footer">
-        <div class="container">
-           <div class="copyright">
-              <p>Copyright 2021 All Right Reserved By Team Carmona, González and Salazar. </p>
-           </div>
-        </div>
-  </footr></body>';
+  <footr><div class="footer"><div class="container"><div class="copyright"><p>Copyright 2021 All Right Reserved By Team Carmona, González and Salazar. </p></div></div></footr></body>';
 }
 ?>
